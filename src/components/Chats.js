@@ -3,6 +3,8 @@ import { useHistory } from "react-router-dom";
 import { ChatEngine } from "react-chat-engine";
 import { auth } from "../firebase";
 
+// import './chats.css'
+
 import { useAuth } from "../contexts/AuthContext";
 import axios from "axios";
 
@@ -74,7 +76,7 @@ const Chats = () => {
        <div className="chats-page">
            <div className="nav-bar">
                <div className="logo-tab">
-                    funChat
+                    FunChat
                </div>
                 <div onClick={handleLogout}
                   className="logout-tab">
@@ -83,7 +85,7 @@ const Chats = () => {
            </div>
         <ChatEngine
         className= "chatengine"
-        height = "93vh"
+        height = "100vh"
         projectID = {process.env.REACT_APP_CHAT_ENGINE_ID}
         userName ={user.email}
         userSecret ={user.uid}
